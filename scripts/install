@@ -66,8 +66,9 @@ ynh_composer_exec install --no-dev
 ynh_script_progression "Installing the app..."
 
 pushd "$install_dir"
- 	ynh_hide_warnings ynh_exec_as_app npm install
- 	ynh_hide_warnings ynh_exec_as_app npm cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js
+	ynh_hide_warnings ynh_exec_as_app npm install
+	ynh_hide_warnings ynh_exec_as_app npm mix --production
+ 	#ynh_hide_warnings ynh_exec_as_app npm cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js
 	php$php_version artisan migrate
 	php$php_version artisan key:generate --force
 	php$php_version artisan storage:link
