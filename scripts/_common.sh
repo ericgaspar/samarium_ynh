@@ -4,6 +4,6 @@
 # COMMON VARIABLES AND CUSTOM HELPERS
 #=================================================
 
-nodejs_version="22"
+nodejs_version="16"
 
-composer_version="2.7.7"
+composer_version="2.0.0"
