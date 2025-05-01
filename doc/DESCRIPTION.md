@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+Simple ERP to generate invoice, track finance, manage website, manage tasks, etc.
